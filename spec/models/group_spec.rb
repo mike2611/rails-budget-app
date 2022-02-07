@@ -5,7 +5,7 @@ RSpec.describe Group, type: :model do
     before(:all) do
       @user = User.create(name: 'John Smith', email: 'john@mail.com', password: 'pass123')
     end
-    subject { Group.new(name: 'GroupTest', icon: 'http://icon.url', user:  @user )}
+    subject { Group.new(name: 'GroupTest', icon: 'http://icon.url', user: @user) }
     before { subject.save }
     after(:all) do
       @user.destroy

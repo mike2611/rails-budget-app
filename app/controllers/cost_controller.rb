@@ -1,4 +1,3 @@
 class CostController < AppilcationController
-  def index
-  end
+  def index; end
 end

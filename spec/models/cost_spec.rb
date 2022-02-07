@@ -5,7 +5,7 @@ RSpec.describe Cost, type: :model do
     before(:all) do
       @user = User.create(name: 'John Smith', email: 'john@mail.com', password: 'pass123')
     end
-    subject { Cost.new(name: 'CostTest', amount: 2, user:  @user )}
+    subject { Cost.new(name: 'CostTest', amount: 2, user: @user) }
     before { subject.save }
     after(:all) do
       @user.destroy
