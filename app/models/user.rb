@@ -1,3 +1,3 @@
 class User < ApplicationRecord
-  has_many :groups, :costs
+  validates :name, presence: true
 end
