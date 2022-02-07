@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Group, type: :model do
   context 'Testing validations for group' do
     before(:all) do
-      @user = User.create(name: 'John Smith')
+      @user = User.create(name: 'John Smith', email: 'john@mail.com', password: 'pass123')
     end
     subject { Group.new(name: 'GroupTest', icon: 'http://icon.url', user:  @user )}
     before { subject.save }

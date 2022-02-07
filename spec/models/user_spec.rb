@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   context 'Testing validations for user' do
-    subject { User.new(name: 'John Smith') }
+    subject { User.new(name: 'John Smith', email: 'john@mail.com', password: 'pass123') }
     before { subject.save }
     after { subject.destroy }
 

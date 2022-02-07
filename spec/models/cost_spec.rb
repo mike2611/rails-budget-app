@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe Cost, type: :model do
   context 'Testing validations for cost' do
     before(:all) do
-      @user = User.create(name: 'John Smith')
+      @user = User.create(name: 'John Smith', email: 'john@mail.com', password: 'pass123')
     end
     subject { Cost.new(name: 'CostTest', amount: 2, user:  @user )}
     before { subject.save }
