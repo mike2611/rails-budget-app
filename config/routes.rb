@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   root "group#index"
   resources :users
   resources :cost, only: [:index]
-  resources :group, only: [:index, :new]
+  resources :group, only: [:index, :new, :create]
 end
