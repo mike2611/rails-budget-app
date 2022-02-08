@@ -1,1 +1,12 @@
-<h1>This is the index for the Home Page</h1>
+<%= render "shared/nav_bar", name: 'Categories' %>
+<section>
+  <div class="container d-flex border my-3 align-items-center justify-content-around">
+    <img src='https://us.123rf.com/450wm/aquir/aquir1909/aquir190907813/129839336-bot%C3%B3n-de-ejemplo-ejemplo-de-signo-verde-redondeado-ejemplo.jpg?ver=6' width="100" height="80" alt="Icon">
+    <p>Category name</p>
+    <p class="fw-bold"> $200</p>
+  </div>
+</section>
+<div class="green-color d-flex justify-content-center">
+  <%= link_to "Add Category", new_group_path ,class:"button border text-white py-2 px-5 m-2" %> 
+</div>
+

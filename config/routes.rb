@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   devise_scope :user do
     get '/user/sign_out' => 'devise/sessions#destroy'
   end
-  root "cost#index"
+  root "group#index"
+  resources :users
   resources :cost, only: [:index]
+  resources :group, only: [:index, :new]
 end
