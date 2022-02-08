@@ -1,16 +1,17 @@
-<%= render "shared/nav_bar", name: 'New Category', display: '', route: root_path %>
+<%= render "shared/nav_bar", name: 'New Transaction', display: '', route: group_cost_index_path %>
 
-<%= form_with model: @group, url: group_index_path do |form| %>
+<%= form_with model: @group, url: group_cost_index_path do |form| %>
   <%= render "shared/form_errors", form: form %>
   <div class="mb-3">
     <%= form.label :name %>
     <%= form.text_field :name, class:"form-control", placeholder: "name" %>
   </div>
   <div class="mb-3">
-    <%= form.label :icon %>
+    <%= form.label :amount %>
     <%= form.text_field :icon, class:"form-control", placeholder: "measurement unit" %>
   </div>
   <div class="mb-3">
     <%= form.submit  "Add Food", class:"btn btn-primary", data: { turbo: false } %>
   </div>
 <% end %>
+
