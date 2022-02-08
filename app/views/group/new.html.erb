@@ -4,13 +4,15 @@
   <%= render "shared/form_errors", form: form %>
   <div class="mb-3">
     <%= form.label :name %>
-    <%= form.text_field :name, class:"form-control", placeholder: "name" %>
+    <%= form.text_field :name, class:"form-control", placeholder: "name", :required => true  %>
   </div>
   <div class="mb-3">
     <%= form.label :icon %>
-    <%= form.text_field :icon, class:"form-control", placeholder: "measurement unit" %>
+    <%= form.text_field :icon, class:"form-control", placeholder: "icon", :required => true  %>
   </div>
   <div class="mb-3">
-    <%= form.submit  "Add Food", class:"btn btn-primary", data: { turbo: false } %>
+    <div class="green-color d-flex justify-content-center">
+      <%= form.submit  "Add Category", class:"btn border text-white py-2 px-5 m-2", data: { turbo: false } %>
+    </div>
   </div>
 <% end %>

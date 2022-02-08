@@ -1,17 +1,22 @@
 <%= render "shared/nav_bar", name: 'New Transaction', display: '', route: group_cost_index_path %>
 
-<%= form_with model: @group, url: group_cost_index_path do |form| %>
+<%= form_with model: @cost, url: group_cost_index_path do |form| %>
   <%= render "shared/form_errors", form: form %>
   <div class="mb-3">
     <%= form.label :name %>
-    <%= form.text_field :name, class:"form-control", placeholder: "name" %>
+    <%= form.text_field :name, class:"form-control", placeholder: "name", :required => true  %>
   </div>
   <div class="mb-3">
     <%= form.label :amount %>
-    <%= form.text_field :icon, class:"form-control", placeholder: "measurement unit" %>
+    <%= form.number_field :amount, class:"form-control", placeholder: "300", :required => true  %>
   </div>
-  <div class="mb-3">
-    <%= form.submit  "Add Food", class:"btn btn-primary", data: { turbo: false } %>
+  <% @groups.each do |group| %>
+    <%= label_tag group.name %>
+    <%= check_box_tag "categories[#{group.id}]", group.name %>
+    <br />
+  <% end %>
+  <div class="green-color d-flex justify-content-center">
+    <%= form.submit  "Create Transaction", class:"btn border text-white py-2 px-5 m-2", data: { turbo: false } %>
   </div>
 <% end %>
 

@@ -1,9 +1,13 @@
 class CostController < ApplicationController
   load_and_authorize_resource
   def index
-    group = Group.find(params[:group_id])
-    @costs = group.costs 
+    @group = Group.find(params[:group_id])
+    @costs = @group.costs 
     @total = total_costs
+  end
+
+  def new 
+    @groups = Group.all
   end
 
   private 
