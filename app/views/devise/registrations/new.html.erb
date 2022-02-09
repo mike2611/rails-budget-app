@@ -1,4 +1,4 @@
-<%= render "shared/nav_bar", name: 'Sign up', display: '', route: '' %>
+<%= render "shared/nav_bar", name: 'Sign up', display: '', route: new_session_path(resource_name) %>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
