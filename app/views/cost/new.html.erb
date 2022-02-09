@@ -8,11 +8,11 @@
   </div>
   <div class="mb-3">
     <%= form.label :amount %>
-    <%= form.number_field :amount, class:"form-control", placeholder: "300", :required => true  %>
+    <%= form.number_field :amount, class:"form-control", placeholder: "amount", :required => true  %>
   </div>
   <% @groups.each do |group| %>
     <%= label_tag group.name %>
-    <%= check_box_tag "categories[#{group.id}]", group.name %>
+    <%= check_box_tag "groups[#{group.id}]", group.name %>
     <br />
   <% end %>
   <div class="green-color d-flex justify-content-center">
