@@ -17,14 +17,15 @@ class GroupController < ApplicationController
     end
   end
 
-  private 
-  
+  private
+
   def group_params
     params.require(:group).permit(:name, :icon)
   end
 
   def total_costs
     return {} if current_user.nil?
+
     group_costs = {}
     @groups.each do |group|
       amount = 0
@@ -35,5 +36,4 @@ class GroupController < ApplicationController
     end
     group_costs
   end
-
 end
