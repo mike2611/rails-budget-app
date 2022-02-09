@@ -1,7 +1,7 @@
 class GroupController < ApplicationController
   load_and_authorize_resource
   def index
-    @groups = Group.all
+    @groups = Group.where(user: current_user)
     @group_costs = total_costs
   end
 
