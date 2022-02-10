@@ -1,0 +1,18 @@
+.navbar {
+  position: relative;
+}
+
+.navbar-brand {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-40%);
+  display: block;
+}
+
+.blue-color {
+  background-color: #3778c2;
+}
+
+.green-color {
+  background-color: #5fb523;
+}

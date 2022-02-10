@@ -1,0 +1,13 @@
+<%= render "shared/nav_bar", name: 'Transactions', display: '', route: root_path %>
+<section>
+  <h2>Total: <%= @total%></h2>
+    <% @costs.each do |cost|%>
+    <div class="container d-flex border my-3 align-items-center justify-content-around">
+      <p><%= cost.name %>: <%= cost.amount %></p>
+    </div>
+    <%end%>
+</section>
+<div class="green-color d-flex justify-content-center">
+  <%= link_to "Add Transaction", new_group_cost_path ,class:"btn border text-white py-2 px-5 m-2" %> 
+</div>
+</div>

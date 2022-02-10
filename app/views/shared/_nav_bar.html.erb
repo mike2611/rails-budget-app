@@ -1,0 +1,19 @@
+<nav class="navbar navbar-expand-lg navbar-light blue-color py-3">
+  <div class="container-fluid">
+    <div class="mx-3">
+      <div class=<%= display %>>
+        <%= link_to "", route, class:'text-white bi bi-arrow-bar-left' %> 
+      </div>
+    </div>
+    <a class="navbar-brand text-white" href="#"><%= name %></a>
+    <div id="navbarNav">
+      <ul class="navbar-nav">
+        <% if !current_user.nil? %>
+          <li class="nav-item">
+            <%= link_to 'Logout', user_sign_out_path ,class:"nav-link fs-5" %>
+          </li>       
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</nav>

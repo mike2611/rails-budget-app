@@ -1,0 +1,16 @@
+<%= render "shared/nav_bar", name: 'Categories', display: 'd-none',  route: root_path %>
+<section>
+  <% @groups.each do |group|%>
+    <%= link_to group_cost_index_path(group.id), :action => 'go' do %>
+      <div class="container d-flex border my-3 align-items-center justify-content-around">
+        <img src='<%= group.icon %>' width="100" height="80" alt="Icon">
+        <p><%= group.name %></p>
+        <p class="fw-bold"><%= @group_costs[group.id] %></p>
+      </div>
+    <% end %>
+  <% end %>
+</section>
+<div class="green-color d-flex justify-content-center">
+  <%= link_to "Add Category", new_group_path ,class:"button border text-white py-2 px-5 m-2" %> 
+</div>
+
