@@ -5,7 +5,7 @@
 .navbar-brand {
   position: absolute;
   left: 50%;
-  transform:translateX(-40%);
+  transform: translateX(-40%);
   display: block;
 }
 
