@@ -1,7 +1,7 @@
 
 ![Live](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Blog App 
+# Budget App 
 https://shrouded-atoll-68662.herokuapp.com/
 
 > In this project, I built a Budget App using Ruby on Rails.
